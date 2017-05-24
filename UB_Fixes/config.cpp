@@ -900,7 +900,7 @@ class cfgWeapons
 		picture = "\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
 		model = "\johnny_payday_masks\data\general0.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"UB_SND_TEX\textures\skins\headgear\UB_Custom_General_Cap_co.paa"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\headgear\UB_Custom_General_Cap_co.paa"};
 		class ItemInfo : HeadgearItem 
 		{
 			mass = 6;
