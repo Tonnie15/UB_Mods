@@ -24,7 +24,11 @@ class CfgPatches
 	    "C_man_polo_2_Socceroos",
 	    "C_man_polo_2_Dkfc",
 	    "C_man_polo_2_F_Subby",
-	    "B_AOR2_F_AL"
+	    "B_AOR2_F_AL",
+	    "UB_NRL_broncos",
+	    "UB_NRL_rabbitohs",
+	    "UB_NRL_roosters",
+	    "UB_Custom_PilotWhite"
 	};
 	weapons[]={};
     };	
@@ -38,6 +42,10 @@ class CfgPatches
 			"RH_fn57_fire",
 			"NovusCopHorn",
 			"srifle_EBR_F_CITY",
+			"UB_NRL_broncos",
+			"UB_NRL_rabbitohs",
+			"UB_NRL_roosters",
+			"UB_Custom_PilotWhite",
 			"U_C_Poloshirt_Socceroos",
 			"U_C_Poloshirt_Dkfc",
 			"U_C_Poloshirt_Subway",
@@ -91,6 +99,50 @@ class cfgVehicles
 	class Civilian: CAManBase {};
 	class Civilian_F: Civilian {};
 	class C_man_1: Civilian_F {};	
+	class UB_Custom_PilotWhite : C_man_1 {
+		_generalMacro = "UB_Custom_PilotWhite";
+		editorPreview="\k_suits\data\UI_suits.paa";
+		scope = public;
+		nakedUniform = "U_BasicBody";
+		uniformClass = "UB_Custom_Pilot_Uniform_White";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\Uniforms\UB_Custom_PilotWhite.co.paa"};
+		displayName = "ASSASSIN8ED Uniform";
+		author = "Tonnie";
+	};
+	class UB_NRL_roosters : C_man_1 {
+		_generalMacro = "UB_NRL_roosters";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\C_man_polo_1_F.jpg";
+		scope = public;
+		nakedUniform = "U_BasicBody";
+		uniformClass = "UB_NRL_roosters_shirt";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\NRL_Clothing\UB_NRL_roosters.paa"};
+		displayName = "Roosters NRL";
+		author = "Tonnie";
+	};
+	class UB_NRL_rabbitohs : C_man_1 {
+		_generalMacro = "UB_NRL_rabbitohs";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\C_man_polo_1_F.jpg";
+		scope = public;
+		nakedUniform = "U_BasicBody";
+		uniformClass = "UB_NRL_rabbitohs_shirt";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\NRL_Clothing\UB_NRL_rabbitohs.paa"};
+		displayName = "Rabbitohs NRL";
+		author = "Tonnie";
+	};
+	class UB_NRL_broncos : C_man_1 {
+		_generalMacro = "UB_NRL_broncos";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\C_man_polo_1_F.jpg";
+		scope = public;
+		nakedUniform = "U_BasicBody";
+		uniformClass = "UB_NRL_broncos_shirt";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\NRL_Clothing\UB_NRL_broncos.paa"};
+		displayName = "Broncos NRL";
+		author = "Tonnie";
+	};
 	class C_man_polo_2_Subway: C_man_1
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -631,7 +683,7 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\UB_Mods\UB_SND_TEX\textures\skins\AK\aladeen_akm.paa",
+			"\UB_SND_TEX\textures\skins\AK\aladeen_akm.paa",
 			"hlc_wp_ak\tex\rifleman_ak74\mount_co.paa",
 			"hlc_wp_ak\tex\rrxviii_mtk83\mtk-83_co.paa"
 		};
@@ -695,6 +747,7 @@ class cfgWeapons
 	
 	class InventoryItem_Base_F;
 	class ItemCore;
+	class HeadgearItem;
 	class UniformItem: InventoryItem_Base_F
 	{
 	};
@@ -726,7 +779,79 @@ class cfgWeapons
 			mass=40;
 		};
 	};
-	
+		class UB_Custom_Pilot_Uniform_White : Uniform_Base {
+		scope = public;
+		author="Tonnie";
+		displayName = "ASSASSIN8ED Uniform";
+		picture = "\k_suits\data\UI_suits.paa";
+		model = "\k_suits\data\suits.p3d";
+		class ItemInfo : UniformItem {
+			uniformModel = "-";
+			uniformClass = "UB_Custom_PilotWhite";
+			containerClass = "Supply60";
+			mass = 20;
+		};
+	};
+		class UB_Pilot_Hat_Custom : ItemCore 
+	{
+		author = "James Jalal";
+		scope = public;
+		displayName = "ASSASSIN8ED Hat";
+		picture = "\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model = "\johnny_payday_masks\data\general0.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\headgear\UB_Custom_General_Cap_co.paa"};
+		class ItemInfo : HeadgearItem 
+		{
+			mass = 6;
+			uniformModel = "\johnny_payday_masks\data\general0.p3d";
+			modelSides[] = {3, 1};
+			armor = 0;
+			passThrough = 1;
+			hiddenSelections[] = {"camo"};
+		};
+	};
+		class UB_NRL_roosters_shirt : Uniform_Base {
+		scope = public;
+		author="Tonnie";
+		displayName = "Roosters NRL";
+		picture = "\UB_SND_TEX\textures\skins\NRL_Clothing\roosters_ui.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo : UniformItem {
+			uniformModel = "-";
+			uniformClass = "UB_NRL_roosters";
+			containerClass = "Supply40";
+			mass = 20;
+		};
+	};
+	class UB_NRL_rabbitohs_shirt : Uniform_Base {
+		scope = public;
+		author="Tonnie";
+		displayName = "Rabbitohs NRL";
+		picture = "\UB_SND_TEX\textures\skins\NRL_Clothing\rabbitohs_ui.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo : UniformItem {
+			uniformModel = "-";
+			uniformClass = "UB_NRL_rabbitohs";
+			containerClass = "Supply40";
+			mass = 20;
+		};
+	};
+
+	class UB_NRL_broncos_shirt : Uniform_Base {
+		scope = public;
+		author="Tonnie";
+		displayName = "Broncos NRL";
+		picture = "\UB_SND_TEX\textures\skins\NRL_Clothing\broncos_ui.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		
+		class ItemInfo : UniformItem {
+			uniformModel = "-";
+			uniformClass = "UB_NRL_broncos";
+			containerClass = "Supply40";
+			mass = 20;
+		};
+	};
 	class U_C_Poloshirt_Socceroos: Uniform_Base
 	{
 		author="$STR_A3_Bohemia_Interactive";
