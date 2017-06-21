@@ -132,7 +132,7 @@ class cfgVehicles
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Tortila";
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_b_c_tortila_blk.paa";
 		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\Aladeen\UB_Custom_Aladeenn_Carryall_co.paa"};
-		displayName = "Aladeen Red";		
+		displayName = "Khorne Bezerker Backpack";		
 		maximumLoad = 320;
 		mass = 60;
 	};
@@ -284,7 +284,7 @@ class cfgVehicles
 		side = 3;
 		faction = "UB_Custom_Aladeenn";
 		vehicleClass = "UB_Custom_Aladeenn";
-		displayName = "Aladeen Red";
+		displayName = "Khorne Bezerker Uniform";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		author = "Tonnie";
 		nakedUniform = "U_BasicBody";
@@ -906,7 +906,7 @@ class cfgWeapons
 		scope = 2;
 		scopecurator = 2;
 		scopearsnel = 2;
-		displayName = "Aladeen Red";
+		displayName = "Khorne Bezerker Uniform";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F";
 		class ItemInfo : UniformItem 
@@ -940,7 +940,7 @@ class cfgWeapons
 		scopecurator = 2;
 		scopearsnel = 2;
 		weaponPoolAvailable = 1;
-		displayName = "Aladeen Red";
+		displayName = "Khorne Bezerker Beret";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		model = "\A3\characters_f_epb\BLUFOR\headgear_beret02";
 		hiddenSelections[] = {"camo"};
@@ -1419,7 +1419,7 @@ class cfgWeapons
 		scope = 2;
 		scopecurator = 2;
 		scopearsnel = 2;
-		displayName = "Aladeen Red";
+		displayName = "Khorne Bezerker Battle Vest";
 		picture = "\A3\Characters_F_Mark\Data\UI\icon_ga_carrier_gl_rig_digi.paa";
 		model = "\A3\Characters_F_Beta\INDEP\equip_ia_ga_carrier_gl_rig.p3d";
 		DLC = "Mark";
