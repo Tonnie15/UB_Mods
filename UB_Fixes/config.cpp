@@ -119,7 +119,7 @@ class cfgVehicles
 	class Civilian_F: Civilian {};
 	class C_man_1: Civilian_F {};	
 	class B_Carryall_Base;
-    class B_Kitbag_Base;
+   	class B_Kitbag_Base;
 	class UB_Custom_Sigma_Kitbag: B_Kitbag_Base	{
 		scope = 2;
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_b_c_tortila_blk.paa";
@@ -280,24 +280,20 @@ class cfgVehicles
     class B_Soldier_base_F;	
 	class UB_Custom_Aladeenn_MAN : B_Soldier_base_F {
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		side = 3;
 		faction = "UB_Custom_Aladeenn";
 		vehicleClass = "UB_Custom_Aladeenn";
 		displayName = "Khorne Bezerker Uniform";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		author = "Tonnie";
+		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
 		nakedUniform = "U_BasicBody";
 		uniformClass = "UB_Custom_Aladeenn_UNIFORM";
 		hiddenSelections[] = {"camo","insignia"};
 		hiddenSelectionsTextures[] = {"\UB_SND_TEX\textures\skins\Aladeen\UB_Custom_Aladeenn_g3_co.paa"};
-		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
 	};
 	class UB_Custom_VOS_MAN : B_Soldier_base_F {
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		side = 3;
 		faction = "UB_Custom_Vos";
 		vehicleClass = "UB_Custom_Vos";
@@ -425,6 +421,7 @@ class cfgWeapons
             "\UB_SND_TEX\textures\skins\mk1\UB_Custom_DMR_Bonez_02.paa"
         };
     };
+    class hlc_rifle_bcmjack;
     class tonnie_rifle_bcmblackjack: hlc_rifle_bcmjack
     {
         author="Tonnie";
@@ -931,7 +928,8 @@ class cfgWeapons
 	{
 		author = Tonnie;
 		scope = 2;
-		scopecurator = 2;
+		
+		= 2;
 		scopearsnel = 2;
 		displayName = "Khorne Bezerker Uniform";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
@@ -948,8 +946,6 @@ class cfgWeapons
 	{
 		author = Tonnie;
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		displayName = "Vos Uniform";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F";
@@ -964,8 +960,6 @@ class cfgWeapons
 	class UB_Custom_Aladeenn_BERET : ItemCore {
 		author = "Tonnie";
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		weaponPoolAvailable = 1;
 		displayName = "Khorne Bezerker Beret";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
@@ -985,8 +979,6 @@ class cfgWeapons
 	class UB_Custom_Vos_BERET : ItemCore {
 		author = "Tonnie";
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		weaponPoolAvailable = 1;
 		displayName = "Vos Beret";
 		picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
@@ -1444,8 +1436,6 @@ class cfgWeapons
 		author = "$STR_A3_Bohemia_Interactive";
 		_generalMacro = "V_PlateCarrierIAGL_dgtl11";
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		displayName = "Khorne Bezerker Battle Vest";
 		picture = "\A3\Characters_F_Mark\Data\UI\icon_ga_carrier_gl_rig_digi.paa";
 		model = "\A3\Characters_F_Beta\INDEP\equip_ia_ga_carrier_gl_rig.p3d";
@@ -1509,8 +1499,6 @@ class cfgWeapons
 		author = "$STR_A3_Bohemia_Interactive";
 		_generalMacro = "V_PlateCarrierIAGL_dgtl1";
 		scope = 2;
-		scopecurator = 2;
-		scopearsnel = 2;
 		displayName = "Vos Vest";
 		picture = "\A3\Characters_F_Mark\Data\UI\icon_ga_carrier_gl_rig_digi.paa";
 		model = "\A3\Characters_F_Beta\INDEP\equip_ia_ga_carrier_gl_rig.p3d";
